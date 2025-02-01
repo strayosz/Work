@@ -4,4 +4,9 @@ public class ElevatorEven extends Elevator{
     }
 
     public ElevatorEven(){}
+
+    @Override
+    public String toString() {
+        return "Even." + status() + " " + getCurrentFloor();
+    }
 }

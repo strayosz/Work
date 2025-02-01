@@ -39,10 +39,21 @@ public abstract class Elevator implements ElevatorStatus, Step {
 
     @Override
     public void change(){
+        if (requiredFloor != currentFloor && status == Status.STAY) {
+            status = Status.UP;
+        }
         if (status == Status.UP) {
             currentFloor++;
         } else if(status == Status.DOWN) {
             currentFloor--;
+            if (currentFloor == 1) {
+                status = Status.STAY;
+                requiredFloor = 1;
+            }
+        }
+        if (currentFloor == requiredFloor && currentFloor != 1) {
+            status = Status.DOWN;
         }
     }
+
 }

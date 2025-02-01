@@ -1,3 +1,3 @@
 public interface Call {
-    public void call(int rFloor, Elevator[] liftsOdd, Elevator[] liftsEven, Elevator[] liftsStaff);
+    public void call(Elevator[] lifts, Elevator[] liftsOdd, Elevator[] liftsEven, Elevator[] liftsStaff);
 }

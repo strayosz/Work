@@ -4,4 +4,9 @@ public class ElevatorStaff extends Elevator{
     }
 
     public ElevatorStaff(){}
+
+    @Override
+    public String toString() {
+        return "Staff." + status() + " " + getCurrentFloor();
+    }
 }

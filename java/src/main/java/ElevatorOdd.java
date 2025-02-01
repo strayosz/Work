@@ -6,4 +6,10 @@ public class ElevatorOdd extends Elevator {
 
     public ElevatorOdd(){}
 
+    @Override
+    public String toString() {
+        return "Odd." + status() + " " + getCurrentFloor();
+    }
+
+
 }
